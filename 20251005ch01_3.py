@@ -1,13 +1,12 @@
-
 #주어진 주제에 따라 설명을 요청하는 함수
 from openai import OpenAI
 from dotenv import load_dotenv
 from typing import List
-import os, sys
 
 prompt_template = "주제 {topic}에 대해 짧은 설명을 해주세요."
 load_dotenv()
 client = OpenAI()
+
 def call_chat_model(messages: List[dict]):
     response = client.chat.completions.create(
         model = "gpt-4o-mini",
