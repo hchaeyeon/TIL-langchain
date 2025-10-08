@@ -9,7 +9,7 @@ load_dotenv()
 model = ChatOpenAI(model= "gpt-4o-mini")
 
 #프롬프트 템플릿 정의 : 주어진 주제에 대한 설명 요청
-prompt = ChatPromptTemplate.from_template("주제 {topic}에 대해 짧은 설명을 해주세요.")
+prompt = ChatPromptTemplate.from_template("주제 {topic}에 대해 설명해주세요.")
 
 #출력 파서 정의 : AI 메시지의 출력 내용을 추출
 parser = StrOutputParser()
