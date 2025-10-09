@@ -17,12 +17,12 @@ parser = StrOutputParser()
 #프롬프트, 모델, 출력 파서를 체인으로 연결
 chain = prompt | model | parser
 
-
 #"이 대답을 영어로 번역해 주세요" 라는 질문을 생성하는 프롬프트 템플릿 정의
 analysis_prompt = ChatPromptTemplate.from_template("이 대답을 영어로 번역해 주세요 : {answer}")
 
 #이전에 정의된 체인과 새로운 작업을 연결하는 체인 구성
 composed_chain = {"answer": chain} | analysis_prompt | model | StrOutputParser()
+
 #LG트윈스라는 주제로 응답을 생성하고 체인 실행
 response = composed_chain.invoke({"topic" : "LG트윈스"})
 
