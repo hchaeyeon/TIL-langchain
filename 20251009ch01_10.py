@@ -1,4 +1,4 @@
-#파이스 연산자 예제를 .pipe() 메서드로 구성한 예제
+#파이프 연산자 예제를 .pipe() 메서드로 구성한 예제
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
