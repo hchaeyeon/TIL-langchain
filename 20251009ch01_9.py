@@ -5,6 +5,7 @@ from langchain_core.output_parsers import StrOutputParser
 from dotenv import load_dotenv
 
 load_dotenv()
+
 #오픈AI의 대규모 언어 모델 설정
 model = ChatOpenAI(model= "gpt-4o-mini")
 
