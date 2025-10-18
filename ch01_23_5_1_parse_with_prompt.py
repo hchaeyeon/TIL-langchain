@@ -6,7 +6,6 @@ from dotenv import load_dotenv
 # .env 파일에서 OPENAI_API_KEY 불러오기
 load_dotenv()
 
-
 #파서 설정
 parser = RetryWithErrorOutputParser.from_llm(parser=JsonOutputParser(),  
                                              llm=ChatOpenAI())
