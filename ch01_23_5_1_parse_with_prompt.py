@@ -16,6 +16,7 @@ parser = RetryWithErrorOutputParser.from_llm(parser=JsonOutputParser(),
 question = "가장 큰 대륙은?"
 ai_response = "아시아입니다" #JSON 형식이 아닌 잘못된 응답
 
+
 try:
     result = parser.parse_with_prompt(ai_response,question)
     print(result)
