@@ -16,6 +16,7 @@ from dotenv import load_dotenv
 
 
 load_dotenv()
+
 #OpenAI모델 설정
 model = ChatOpenAI(model_name="gpt-4o", temperature=0.0) 
 
@@ -33,7 +34,7 @@ class FinancialAdvice(BaseModel):
             raise ValueError("잘못된 질문 형식입니다! 질문은 '?'로 끝나야 합니다")
         return values   
     
-#차서 설정 및 프롬프트 템플릿에 지침 삽입
+#파서 설정 및 프롬프트 템플릿에 지침 삽입
 parser = PydanticOutputParser(pydantic_object=FinancialAdvice)
 prompt = PromptTemplate(
     template = "다음 금융 관련 질문에 답변해 주세요. \n{format_instructions}\n질문:{query}\n",
