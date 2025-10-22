@@ -51,4 +51,5 @@ try :
 except Exception as e:
     print(f"오류 발생:{e}")
 
+
 #try-except 구문 = 오류 발생을 대비해 프로그램의 안정성 유지 + 발생한 오류를 쉽게 디버깅할 수 있도록 처리
